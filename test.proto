@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+package god;
+
+message Test {
+    int64 count = 1;
+}
+

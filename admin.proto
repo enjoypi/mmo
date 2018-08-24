@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package god;
+
+enum ErrorCode {
+    OK = 0;
+}
+
+message AuthReq {
+    string cookie = 1;
+    uint64 ID = 2;
+}
+
+message AuthAck {
+    ErrorCode code = 1;
+}
+
+service Admin {
+  rpc Auth(AuthReq) returns (AuthAck);
+}
+
